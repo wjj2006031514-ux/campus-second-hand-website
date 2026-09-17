@@ -6,15 +6,15 @@ const STORAGE_KEYS = {
   version: "campusTradeDataVersion",
 };
 
-const DATA_VERSION = "1.0";
+const DATA_VERSION = "2.0";
 
 const CATEGORY_IMAGES = {
-  教材书籍: "assets/product-book.svg",
-  电子数码: "assets/product-headphones.svg",
-  生活用品: "assets/product-lamp.svg",
-  运动户外: "assets/product-basketball.svg",
-  交通工具: "assets/product-bike.svg",
-  其他闲置: "assets/product-keyboard.svg",
+  教材书籍: "assets/product-book.jpg",
+  电子数码: "assets/product-headphones.jpg",
+  生活用品: "assets/product-lamp.jpg",
+  运动户外: "assets/product-placeholder.svg",
+  交通工具: "assets/product-bike.jpg",
+  其他闲置: "assets/product-keyboard.jpg",
 };
 
 const state = {
@@ -926,9 +926,18 @@ function seedData() {
     seedGoods("g2", "宿舍护眼台灯", "生活用品", 25, "八成新", "2号宿舍楼下", "三档亮度，白光和暖光可调，插电使用，功能正常。", "u-zhaomin", 2),
     seedGoods("g3", "头戴式蓝牙耳机", "电子数码", 78, "九成新", "教学楼B区", "续航正常，耳罩干净，带充电线，适合自习使用。", "u-liming", 3),
     seedGoods("g4", "九成新山地自行车", "交通工具", 260, "九成新", "学校南门", "变速正常，车锁和打气筒一起给，可在校内试骑。", "u-student", 4),
-    seedGoods("g5", "科学计算器", "电子数码", 35, "八成新", "信息楼一楼", "按键正常，屏幕清晰，适合计算机和工程类课程。", "u-zhaomin", 5),
-    seedGoods("g6", "小型电热水壶", "生活用品", 32, "七成新", "3号宿舍楼下", "容量1.5升，自动断电，外壳有轻微使用痕迹。", "u-student", 6),
-    seedGoods("g7", "篮球和打气筒", "运动户外", 45, "八成新", "操场东侧", "球体弹性正常，打气筒可以一起带走。", "u-liming", 7),
+    {
+      ...seedGoods("g5", "科学计算器", "电子数码", 35, "八成新", "信息楼一楼", "按键正常，屏幕清晰，适合计算机和工程类课程。", "u-zhaomin", 5),
+      image: "assets/product-placeholder.svg",
+    },
+    {
+      ...seedGoods("g6", "小型电热水壶", "生活用品", 32, "七成新", "3号宿舍楼下", "容量1.5升，自动断电，外壳有轻微使用痕迹。", "u-student", 6),
+      image: "assets/product-placeholder.svg",
+    },
+    {
+      ...seedGoods("g7", "篮球和打气筒", "运动户外", 45, "八成新", "操场东侧", "球体弹性正常，打气筒可以一起带走。", "u-liming", 7),
+      image: "assets/product-placeholder.svg",
+    },
     seedGoods("g8", "有线机械键盘", "电子数码", 86, "九成新", "信息楼三楼", "青轴，按键正常，适合宿舍或实验室使用。", "u-zhaomin", 8),
     {
       ...seedGoods("g9", "计算机网络教材", "教材书籍", 22, "九成新", "图书馆门口", "课程结束后不再使用，书角有轻微磨损。", "u-student", 9),

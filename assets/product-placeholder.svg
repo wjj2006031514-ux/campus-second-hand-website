@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="暂无实拍图">
+  <rect width="640" height="420" fill="#eef2f5"/>
+  <rect x="100" y="55" width="440" height="310" rx="18" fill="#dae3eb"/>
+  <circle cx="320" cy="184" r="58" fill="#f7fafc"/>
+  <path d="M320 145c18 0 31 13 31 30 0 25-31 24-31 55" fill="none" stroke="#60788a" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="320" cy="284" r="12" fill="#60788a"/>
+  <text x="320" y="340" text-anchor="middle" fill="#526879" font-family="Microsoft YaHei, sans-serif" font-size="22">暂无实拍图</text>
+</svg>
