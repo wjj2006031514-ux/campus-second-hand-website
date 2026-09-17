@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="机械键盘">
+  <rect width="640" height="420" fill="#edf1f3"/>
+  <circle cx="512" cy="105" r="64" fill="#dfe6e9"/>
+  <path d="M126 142h388c22 0 40 18 40 40v112c0 22-18 40-40 40H126c-22 0-40-18-40-40V182c0-22 18-40 40-40z" fill="#334751"/>
+  <g fill="#e6edf0">
+    <rect x="126" y="181" width="50" height="34" rx="6"/><rect x="186" y="181" width="50" height="34" rx="6"/><rect x="246" y="181" width="50" height="34" rx="6"/><rect x="306" y="181" width="50" height="34" rx="6"/><rect x="366" y="181" width="50" height="34" rx="6"/><rect x="426" y="181" width="50" height="34" rx="6"/>
+    <rect x="106" y="227" width="50" height="34" rx="6"/><rect x="166" y="227" width="50" height="34" rx="6"/><rect x="226" y="227" width="50" height="34" rx="6"/><rect x="286" y="227" width="50" height="34" rx="6"/><rect x="346" y="227" width="50" height="34" rx="6"/><rect x="406" y="227" width="50" height="34" rx="6"/><rect x="466" y="227" width="50" height="34" rx="6"/>
+    <rect x="126" y="273" width="330" height="34" rx="6"/>
+  </g>
+  <rect x="474" y="287" width="42" height="20" rx="5" fill="#e2a24a"/>
+</svg>

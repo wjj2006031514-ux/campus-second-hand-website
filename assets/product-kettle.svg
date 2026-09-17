@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="电热水壶">
+  <rect width="640" height="420" fill="#f3eeeb"/>
+  <circle cx="512" cy="98" r="62" fill="#eaded8"/>
+  <path d="M218 146h215v158c0 37-30 67-67 67h-81c-37 0-67-30-67-67z" fill="#405c60"/>
+  <path d="M433 183h33c30 0 54 24 54 54s-24 54-54 54h-33" fill="none" stroke="#405c60" stroke-width="27"/>
+  <path d="M236 147l40-83h103l39 83" fill="#55787b"/>
+  <path d="M253 119h145" stroke="#b9d2d1" stroke-width="15" stroke-linecap="round"/>
+  <path d="M250 200h151" stroke="#ca5f4a" stroke-width="18" stroke-linecap="round"/>
+  <path d="M268 356h115" stroke="#273e42" stroke-width="17" stroke-linecap="round"/>
+</svg>

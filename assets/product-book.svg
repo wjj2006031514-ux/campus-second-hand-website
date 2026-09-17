@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="教材书籍">
+  <rect width="640" height="420" fill="#eef4f8"/>
+  <circle cx="514" cy="96" r="62" fill="#dce9f4"/>
+  <path d="M155 112h300c22 0 40 18 40 40v170H195c-22 0-40-18-40-40V112z" fill="#1f5f95"/>
+  <path d="M155 112h38v210h-38c-22 0-40-18-40-40V152c0-22 18-40 40-40z" fill="#174c77"/>
+  <path d="M205 137h240v24H205zm0 52h186v22H205zm0 48h225v22H205z" fill="#dcecf8"/>
+  <path d="M120 292h333v28H160c-22 0-40-13-40-28z" fill="#17415f"/>
+  <path d="M147 326h346v20H168c-12 0-21-9-21-20z" fill="#94b3c8"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="护眼台灯">
+  <rect width="640" height="420" fill="#f4f1e9"/>
+  <circle cx="140" cy="105" r="54" fill="#efe2c8"/>
+  <path d="M277 113l92-42 87 74-72 83z" fill="#dc9b36"/>
+  <path d="M282 111l58 110" stroke="#7e5b28" stroke-width="24" stroke-linecap="round"/>
+  <path d="M339 220h58v91h-58z" fill="#a66d24"/>
+  <path d="M256 305h218c22 0 40 18 40 40v19H216v-19c0-22 18-40 40-40z" fill="#385a54"/>
+  <path d="M274 130l72-30 57 48-53 58z" fill="#ffe5a3"/>
+  <path d="M331 206c8 28 44 39 69 20" fill="none" stroke="#f6c85d" stroke-width="10" stroke-linecap="round"/>
+</svg>

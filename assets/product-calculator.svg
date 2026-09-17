@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="科学计算器">
+  <rect width="640" height="420" fill="#f0f2f5"/>
+  <circle cx="130" cy="96" r="62" fill="#e1e6eb"/>
+  <rect x="187" y="78" width="274" height="276" rx="20" fill="#354752"/>
+  <rect x="216" y="111" width="216" height="65" rx="8" fill="#cfe0c7"/>
+  <g fill="#e8edf0">
+    <rect x="217" y="201" width="46" height="34" rx="6"/>
+    <rect x="280" y="201" width="46" height="34" rx="6"/>
+    <rect x="343" y="201" width="46" height="34" rx="6"/>
+    <rect x="217" y="249" width="46" height="34" rx="6"/>
+    <rect x="280" y="249" width="46" height="34" rx="6"/>
+    <rect x="343" y="249" width="46" height="34" rx="6"/>
+    <rect x="217" y="297" width="46" height="34" rx="6"/>
+    <rect x="280" y="297" width="46" height="34" rx="6"/>
+  </g>
+  <rect x="343" y="297" width="46" height="34" rx="6" fill="#e2a24a"/>
+</svg>

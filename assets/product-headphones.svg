@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="蓝牙耳机">
+  <rect width="640" height="420" fill="#eef2f5"/>
+  <circle cx="500" cy="105" r="68" fill="#dfe8ee"/>
+  <path d="M177 244v-35c0-82 61-143 143-143s143 61 143 143v35" fill="none" stroke="#253845" stroke-width="42" stroke-linecap="round"/>
+  <rect x="130" y="215" width="98" height="154" rx="36" fill="#1f303c"/>
+  <rect x="412" y="215" width="98" height="154" rx="36" fill="#1f303c"/>
+  <rect x="153" y="244" width="52" height="96" rx="24" fill="#6c8492"/>
+  <rect x="435" y="244" width="52" height="96" rx="24" fill="#6c8492"/>
+  <path d="M226 347c41 22 147 22 188 0" fill="none" stroke="#6d8290" stroke-width="16" stroke-linecap="round"/>
+</svg>

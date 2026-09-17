@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="篮球">
+  <rect width="640" height="420" fill="#f5efe7"/>
+  <circle cx="140" cy="95" r="56" fill="#eee0cf"/>
+  <circle cx="320" cy="220" r="138" fill="#d86a2e"/>
+  <path d="M182 220h276M320 82c-52 44-78 91-78 138s26 94 78 138M320 82c52 44 78 91 78 138s-26 94-78 138" fill="none" stroke="#3d3028" stroke-width="11"/>
+  <path d="M195 139c39 25 90 39 125 39s86-14 125-39M195 301c39-25 90-39 125-39s86 14 125 39" fill="none" stroke="#3d3028" stroke-width="10"/>
+</svg>

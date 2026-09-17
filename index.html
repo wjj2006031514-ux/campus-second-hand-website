@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="校园易物是一个面向在校学生的二手物品浏览、发布和收藏网站。"
+    />
+    <title>校园易物 - 校园二手交易网站</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="topbar">
+        <button class="brand" type="button" data-route="home" aria-label="返回首页">
+          <span class="brand-mark"><i data-lucide="package-open"></i></span>
+          <span>
+            <strong>校园易物</strong>
+            <small>闲置物品就近交易</small>
+          </span>
+        </button>
+
+        <form class="header-search" id="headerSearchForm" role="search">
+          <i data-lucide="search"></i>
+          <input
+            id="headerSearchInput"
+            type="search"
+            placeholder="搜索教材、生活用品、电子产品"
+            autocomplete="off"
+          />
+          <button type="submit">搜索</button>
+        </form>
+
+        <div class="header-actions" id="headerActions"></div>
+      </div>
+
+      <nav class="main-nav" aria-label="主导航">
+        <button type="button" data-route="home"><i data-lucide="house"></i>首页</button>
+        <button type="button" data-route="market"><i data-lucide="layout-grid"></i>全部商品</button>
+        <button type="button" data-route="publish"><i data-lucide="circle-plus"></i>发布商品</button>
+        <button type="button" data-route="favorites"><i data-lucide="heart"></i>我的收藏</button>
+        <button type="button" data-route="my-goods"><i data-lucide="clipboard-list"></i>我的商品</button>
+        <button type="button" data-route="profile"><i data-lucide="user-round"></i>个人中心</button>
+        <button type="button" data-route="admin" class="admin-nav"><i data-lucide="settings"></i>后台管理</button>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="view" id="view-home">
+        <div class="intro-band">
+          <div class="intro-copy">
+            <span class="eyebrow">校园闲置循环</span>
+            <h1>找到同学手里还用得上的东西</h1>
+            <p>教材、电子产品、生活用品都可以在这里发布和查找，交易地点以校内为主。</p>
+          </div>
+          <form class="hero-search" id="heroSearchForm">
+            <label for="heroSearchInput">搜索商品</label>
+            <div>
+              <input id="heroSearchInput" type="search" placeholder="例如：高数教材、台灯、自行车" />
+              <button type="submit"><i data-lucide="search"></i>搜索</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="metric-strip" id="homeMetrics"></div>
+
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">分类浏览</span>
+            <h2>常用分类</h2>
+          </div>
+          <button type="button" class="text-button" data-route="market">查看全部</button>
+        </div>
+        <div class="category-strip" id="homeCategories"></div>
+
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">最近发布</span>
+            <h2>新鲜闲置</h2>
+          </div>
+          <button type="button" class="text-button" data-route="market">更多商品</button>
+        </div>
+        <div class="goods-grid" id="homeGoodsGrid"></div>
+      </section>
+
+      <section class="view" id="view-market">
+        <div class="page-heading">
+          <div>
+            <span class="eyebrow">商品大厅</span>
+            <h1>全部商品</h1>
+            <p id="marketSummary"></p>
+          </div>
+          <button type="button" class="primary-button" data-route="publish">
+            <i data-lucide="plus"></i>发布商品
+          </button>
+        </div>
+
+        <div class="filter-panel">
+          <div class="filter-row">
+            <span>分类</span>
+            <div class="filter-chips" id="marketCategories"></div>
+          </div>
+          <div class="filter-row">
+            <span>排序</span>
+            <div class="filter-chips" id="marketSortOptions">
+              <button type="button" data-sort="new" class="active">最新发布</button>
+              <button type="button" data-sort="price-asc">价格从低到高</button>
+              <button type="button" data-sort="price-desc">价格从高到低</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="goods-grid" id="marketGoodsGrid"></div>
+      </section>
+
+      <section class="view" id="view-publish">
+        <div class="page-heading compact">
+          <div>
+            <span class="eyebrow">商品发布</span>
+            <h1 id="publishTitle">发布闲置物品</h1>
+            <p>信息填写完整后提交，管理员审核通过即可在商品大厅看到。</p>
+          </div>
+        </div>
+
+        <form class="form-layout" id="goodsForm">
+          <div class="form-main">
+            <div class="field-group">
+              <label for="goodsName">商品名称</label>
+              <input id="goodsName" name="goodsName" maxlength="50" required />
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="goodsCategory">商品分类</label>
+                <select id="goodsCategory" name="goodsCategory" required></select>
+              </div>
+              <div class="field-group">
+                <label for="goodsPrice">商品价格（元）</label>
+                <input id="goodsPrice" name="goodsPrice" type="number" min="0.01" step="0.01" required />
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="goodsCondition">新旧程度</label>
+                <select id="goodsCondition" name="goodsCondition" required>
+                  <option value="全新">全新</option>
+                  <option value="九成新">九成新</option>
+                  <option value="八成新">八成新</option>
+                  <option value="七成新">七成新</option>
+                  <option value="有使用痕迹">有使用痕迹</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label for="goodsLocation">交易地点</label>
+                <input id="goodsLocation" name="goodsLocation" maxlength="40" placeholder="例如：图书馆门口" required />
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="goodsDescription">商品说明</label>
+              <textarea
+                id="goodsDescription"
+                name="goodsDescription"
+                rows="6"
+                maxlength="300"
+                placeholder="说明商品的使用情况、配件和交易时间"
+                required
+              ></textarea>
+            </div>
+
+            <div class="field-group">
+              <label for="goodsContact">联系方式</label>
+              <input id="goodsContact" name="goodsContact" maxlength="30" placeholder="手机号、微信号或QQ" required />
+            </div>
+          </div>
+
+          <aside class="form-side">
+            <div class="upload-box">
+              <img id="goodsImagePreview" src="assets/product-book.svg" alt="商品图片预览" />
+              <label for="goodsImage" class="secondary-button upload-button">
+                <i data-lucide="image-plus"></i>选择图片
+              </label>
+              <input id="goodsImage" name="goodsImage" type="file" accept="image/*" hidden />
+              <small>不上传图片时，将使用当前分类的默认图片。</small>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="primary-button">
+                <i data-lucide="send"></i><span id="goodsSubmitLabel">提交审核</span>
+              </button>
+              <button type="button" class="secondary-button" id="cancelEditButton" hidden>取消编辑</button>
+            </div>
+          </aside>
+        </form>
+      </section>
+
+      <section class="view" id="view-favorites">
+        <div class="page-heading compact">
+          <div>
+            <span class="eyebrow">个人收藏</span>
+            <h1>我的收藏</h1>
+            <p>收藏的商品仍可继续查看详情，下架或售出后会显示对应状态。</p>
+          </div>
+        </div>
+        <div class="goods-grid" id="favoritesGrid"></div>
+      </section>
+
+      <section class="view" id="view-my-goods">
+        <div class="page-heading compact">
+          <div>
+            <span class="eyebrow">发布记录</span>
+            <h1>我的商品</h1>
+            <p>查看审核状态，编辑未售出的商品，或标记为已经售出。</p>
+          </div>
+          <button type="button" class="primary-button" data-route="publish">
+            <i data-lucide="plus"></i>继续发布
+          </button>
+        </div>
+        <div class="record-list" id="myGoodsList"></div>
+      </section>
+
+      <section class="view" id="view-profile">
+        <div class="page-heading compact">
+          <div>
+            <span class="eyebrow">账号信息</span>
+            <h1>个人中心</h1>
+            <p>查看账号资料和自己的发布、收藏情况。</p>
+          </div>
+        </div>
+        <div class="profile-layout" id="profileContent"></div>
+      </section>
+
+      <section class="view" id="view-admin">
+        <div class="page-heading compact">
+          <div>
+            <span class="eyebrow">后台管理</span>
+            <h1>商品审核</h1>
+            <p>管理员账号可以审核新发布的商品，也可以下架不适合继续展示的内容。</p>
+          </div>
+        </div>
+        <div class="admin-metrics" id="adminMetrics"></div>
+        <div class="admin-section">
+          <div class="admin-section-title">
+            <h2>待审核商品</h2>
+            <span id="pendingCount"></span>
+          </div>
+          <div class="record-list" id="pendingGoodsList"></div>
+        </div>
+        <div class="admin-section">
+          <div class="admin-section-title">
+            <h2>全部商品记录</h2>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>商品</th>
+                  <th>分类</th>
+                  <th>价格</th>
+                  <th>发布人</th>
+                  <th>状态</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody id="adminGoodsTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="authDialog" class="modal">
+      <div class="modal-card auth-modal">
+        <button type="button" class="icon-button modal-close" data-close-dialog="authDialog" aria-label="关闭">
+          <i data-lucide="x"></i>
+        </button>
+        <div class="auth-brand">
+          <span class="brand-mark"><i data-lucide="package-open"></i></span>
+          <div>
+            <strong>校园易物</strong>
+            <p>登录后可以发布、收藏和管理商品</p>
+          </div>
+        </div>
+        <div class="auth-tabs" role="tablist">
+          <button type="button" class="active" data-auth-tab="login">登录</button>
+          <button type="button" data-auth-tab="register">注册</button>
+        </div>
+
+        <form id="loginForm" class="auth-form">
+          <div class="field-group">
+            <label for="loginUsername">用户名</label>
+            <input id="loginUsername" name="username" autocomplete="username" required />
+          </div>
+          <div class="field-group">
+            <label for="loginPassword">密码</label>
+            <input id="loginPassword" name="password" type="password" autocomplete="current-password" required />
+          </div>
+          <p class="demo-account">演示账号：student / 123456，管理员：admin / 123456</p>
+          <button type="submit" class="primary-button full-width">
+            <i data-lucide="log-in"></i>登录
+          </button>
+        </form>
+
+        <form id="registerForm" class="auth-form" hidden>
+          <div class="field-group">
+            <label for="registerName">姓名</label>
+            <input id="registerName" name="name" maxlength="20" required />
+          </div>
+          <div class="field-group">
+            <label for="registerUsername">用户名</label>
+            <input id="registerUsername" name="username" maxlength="20" required />
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="registerPassword">密码</label>
+              <input id="registerPassword" name="password" type="password" minlength="6" required />
+            </div>
+            <div class="field-group">
+              <label for="registerConfirm">确认密码</label>
+              <input id="registerConfirm" name="confirmPassword" type="password" minlength="6" required />
+            </div>
+          </div>
+          <button type="submit" class="primary-button full-width">
+            <i data-lucide="user-plus"></i>注册并登录
+          </button>
+        </form>
+      </div>
+    </dialog>
+
+    <dialog id="goodsDialog" class="modal">
+      <div class="modal-card goods-modal">
+        <button type="button" class="icon-button modal-close" data-close-dialog="goodsDialog" aria-label="关闭">
+          <i data-lucide="x"></i>
+        </button>
+        <div id="goodsDetailContent"></div>
+      </div>
+    </dialog>
+
+    <dialog id="confirmDialog" class="modal small-modal">
+      <div class="modal-card">
+        <h2 id="confirmTitle">确认操作</h2>
+        <p id="confirmMessage"></p>
+        <div class="dialog-actions">
+          <button type="button" class="secondary-button" id="confirmCancelButton">取消</button>
+          <button type="button" class="danger-button" id="confirmActionButton">确认</button>
+        </div>
+      </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="assets/lucide.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
